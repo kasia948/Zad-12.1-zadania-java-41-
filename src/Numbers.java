@@ -8,7 +8,7 @@ public class Numbers {
 
         TreeSet<Integer> zbior = new TreeSet<>();
 
-        for (int i = 0; i < 50; i++) {
+        while (zbior.size()<50){
             zbior.add(rand.nextInt(1000));
         }
 
@@ -25,9 +25,10 @@ public class Numbers {
         }
         System.out.println("Suma wszystkich elementów zbioru to " + sum);
 
+        Iterator <Integer> numIterator2 = zbior.iterator();
         double average=sum/50;
-        while (numIterator.hasNext()) {
-            int liczba= numIterator.next();
+        while (numIterator2.hasNext()) {
+            int liczba= numIterator2.next();
             if (liczba>average){
                 System.out.print(liczba+", ");
             }
